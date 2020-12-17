@@ -36,22 +36,24 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-       // Double Bmi = Double.parseDouble(intent.getStringExtra("BMI"));
-        Double Bmi = 26.33;
+        String Bmistr = intent.getStringExtra("Bmi");
+        double Bmi = Double.parseDouble(Bmistr);
+        Log.v("고돌", String.valueOf(Bmi));
+
 
         if (Bmi >= 30) {
             iv.setImageResource(R.drawable.be);
 
-           textView.setText(Bmi.toString().substring(0,4));
+           textView.setText(Double.toString(Bmi));
         } else if (Bmi >= 25) {
             iv.setImageResource(R.drawable.gwa);
-            textView.setText(Bmi.toString().substring(0,4));
+            textView.setText(Double.toString(Bmi));
         } else if (Bmi >= 18.5) {
             iv.setImageResource(R.drawable.jung);
-            textView.setText(Bmi.toString().substring(0,4));
+            textView.setText(Double.toString(Bmi));
         } else {
             iv.setImageResource(R.drawable.low);
-            textView.setText(Bmi.toString().substring(0,4));
+            textView.setText(Double.toString(Bmi));
 
         }
 
@@ -59,11 +61,8 @@ public class ResultActivity extends AppCompatActivity {
          @Override
          public void onClick(View v) {
              String[] random = getResources().getStringArray(R.array.random);
-             Random random1 =new Random(random.length);
-
-
-             String msg = String.valueOf(random1);
-
+             int randomNum = (int)(Math.random() * random.length);
+             String msg = random[randomNum];
 
              new AlertDialog.Builder(ResultActivity.this)
                      .setTitle("당신을 위한 Tip")

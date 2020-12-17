@@ -28,16 +28,17 @@
         <TextView
             android:id="@+id/tvBmi"
             android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            />
+            android:gravity="center"
+            android:background="@drawable/bmibox" />
 
 
     </LinearLayout>
     <LinearLayout
 
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="160dp"
         android:orientation="vertical"
         >
 
@@ -57,6 +58,7 @@
         android:id="@+id/homeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="처음으로"
 
         />
@@ -65,6 +67,7 @@
         android:id="@+id/tipBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="TIP"
 
         />

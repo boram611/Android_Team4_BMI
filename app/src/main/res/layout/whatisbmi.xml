@@ -13,7 +13,7 @@
 이 BMI 지수가 높으면 높을수록 생활습관병이 걸리기 쉽고, 비만학회에서는 남녀 모두 지수가 22일때
 가장 건강한 상태이고 이상적인 체중일 때 라고 합니다.
 "
-        android:textSize="20dp"
+        android:textSize="21dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_marginBottom="70dp"/>

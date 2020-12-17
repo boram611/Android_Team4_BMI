@@ -25,7 +25,8 @@
             android:id="@+id/userName_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="당신의 이름을 입력해주세요"/>
+            android:hint="당신의 이름을 입력해주세요"
+            android:maxLines="1"/>
 
 
 

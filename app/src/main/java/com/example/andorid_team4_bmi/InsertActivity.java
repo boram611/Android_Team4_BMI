@@ -58,7 +58,7 @@ public class InsertActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.gotoResult:
                         intent = new Intent(InsertActivity.this, ResultActivity.class);
-                        intent.putExtra("Bmi", Bmi);
+                        intent.putExtra("Bmi", Double.toString(Bmi));
                         startActivity(intent);
                         break;
 

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Andorid_Team4_BMI">
 
-        <activity android:name=".ResultActivity" >
+        <activity android:name=".MainActivity" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
         <activity android:name=".TipActivity"/>
     <activity android:name=".InsertActivity" />
     <activity android:name=".LoginActivity" />
-    <activity android:name=".MainActivity"/>
+    <activity android:name=".ResultActivity"/>
     </application>
 
 </manifest>

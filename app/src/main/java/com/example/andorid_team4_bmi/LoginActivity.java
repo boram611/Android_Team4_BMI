@@ -28,35 +28,44 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View v) {
                 editText = findViewById(R.id.userName_login);
                 userName = editText.getText().toString();
+                if(userName.length() != 0) {
+                    new AlertDialog.Builder(LoginActivity.this)
+
+                            .setTitle("이름 확인")
+                            .setMessage("당신의 이름은 " + userName + "이 맞습니까?")
+//                      .setIcon(R.mipmap.ic_BMI)
+                            .setCancelable(false)
+                            .setPositiveButton("네", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(LoginActivity.this, InsertActivity.class);
+                                    intent.putExtra("userName", userName);
+                                    startActivity(intent);
+
+                                }
+                            })
+
+                            .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    TextView text = findViewById(R.id.userName_login);
+                                    text.setSelectAllOnFocus(true);
+                                    text.setText("");
+                                    text.setHint("이름을 다시 입력해주세요!");
+
+
+                                }
+                            })
+
+                            .show();
+                }else {
                 new AlertDialog.Builder(LoginActivity.this)
-
-                        .setTitle("이름 확인")
-                        .setMessage("당신의 이름은 " + userName + "이 맞습니다까?")
-//                    .setIcon(R.mipmap.ic_BMI)
+                        .setMessage("이름을 입력해 주세요!")
                         .setCancelable(false)
-                        .setPositiveButton("네", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(LoginActivity.this, InsertActivity.class);
-                                intent.putExtra("userName", userName);
-                                startActivity(intent);
-
-                            }
-                        })
-
-                        .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                TextView text = findViewById(R.id.userName_login);
-                                text.setSelectAllOnFocus(true);
-                                text.setText("이름을 다시 입력해주세요!");
-
-
-                            }
-                        })
-
+                        .setPositiveButton("확인", null)
                         .show();
 
+                 }
 
             }
         });

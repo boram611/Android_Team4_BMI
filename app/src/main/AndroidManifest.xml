@@ -19,7 +19,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TipActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".LoginActivity" />

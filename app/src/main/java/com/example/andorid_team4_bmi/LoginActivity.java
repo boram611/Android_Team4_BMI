@@ -49,7 +49,8 @@ public class LoginActivity extends AppCompatActivity{
                             public void onClick(DialogInterface dialog, int which) {
                                 TextView text = findViewById(R.id.userName_login);
                                 text.setSelectAllOnFocus(true);
-                                text.setText("이름을 다시 입력해주세요!");
+                                text.setText("");
+                                text.setHint("이름을 다시 입력해주세요!");
 
 
                             }

@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="성별 " />
-    </LinearLayout>
+
         <RadioGroup
             android:gravity="center"
             android:id="@+id/gender"
@@ -112,5 +112,5 @@
         android:backgroundTint="#F49393"
         android:text="결과보기" />
 
-
+    </LinearLayout>
 </LinearLayout>

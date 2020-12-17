@@ -16,8 +16,7 @@ import android.widget.TextView;
 
 public class InsertActivity extends AppCompatActivity {
 
-// field
-
+    // field
     TextView userName;
     EditText user_height; // 키
     EditText user_weight; // 몸무게
@@ -53,13 +52,14 @@ public class InsertActivity extends AppCompatActivity {
                 Intent intent = null;
 
 
+                //키, 몸무게 받아오기
                 int weight = Integer.parseInt(user_weight.getText().toString());
                 int height = Integer.parseInt(user_height.getText().toString());
 
                 //BMI공식
                 double Bmi = 10000 * weight / (height * height);
 
-
+                //Bmi 값 넘기기
                 switch (v.getId()) {
                     case R.id.gotoResult:
                         intent = new Intent(InsertActivity.this, ResultActivity.class);
@@ -74,36 +74,36 @@ public class InsertActivity extends AppCompatActivity {
         });
 
 
-        // 성별 넘기기
-        gender.setOnCheckedChangeListener(checkListener);
     }
+//        // 성별 넘기기
+//        gender.setOnCheckedChangeListener(checkListener);
+//
+//    RadioGroup.OnCheckedChangeListener checkListener = new RadioGroup.OnCheckedChangeListener() {
+//        @Override
+//        public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-    RadioGroup.OnCheckedChangeListener checkListener = new RadioGroup.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
+//            Intent intent = null;
+//            RadioButton male = findViewById(R.id.man);
+//            RadioButton female = findViewById(R.id.woman);
+//
+//            String man = male.getText().toString();
+//            String woman = female.getText().toString();
 
-            Intent intent = null;
-            RadioButton male = findViewById(R.id.man);
-            RadioButton female = findViewById(R.id.woman);
-
-            String man = male.getText().toString();
-            String woman = female.getText().toString();
-
-            switch (checkedId) {
-
-                case R.id.man:
-                    intent = new Intent(InsertActivity.this, ResultActivity.class);
-                    intent.putExtra("man", man);
-                    startActivity(intent);
-                    break;
-                case R.id.woman:
-                    intent = new Intent(InsertActivity.this, ResultActivity.class);
-                    intent.putExtra("woman", woman);
-                    startActivity(intent);
-                    break;
-            }
-        }
-    };
+//            switch (checkedId) {
+//
+//                case R.id.man:
+//                    intent = new Intent(InsertActivity.this, ResultActivity.class);
+//                    intent.putExtra("man", man);
+//                    startActivity(intent);
+//                    break;
+//                case R.id.woman:
+//                    intent = new Intent(InsertActivity.this, ResultActivity.class);
+//                    intent.putExtra("woman", woman);
+//                    startActivity(intent);
+//                    break;
+//            }
+//        }
+//    };
 
 
     @Override

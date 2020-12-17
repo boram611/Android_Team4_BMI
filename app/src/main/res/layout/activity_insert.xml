@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
     android:gravity="center"
-    android:padding="50dp">
+    android:orientation="vertical"
+    android:padding="50dp"
+    tools:context=".MainActivity">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
@@ -21,8 +21,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,9 +31,10 @@
 
         <EditText
             android:id="@+id/user_height"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="number"
+            android:maxLength="3" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,9 +44,9 @@
     </LinearLayout>
     <!--유저 체중-->
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -56,53 +57,54 @@
         <EditText
             android:id="@+id/user_Weight"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:maxLength="3" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="kg" />
-
+X
     </LinearLayout>
 
     <!--성별-->
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:text="성별 " />
     </LinearLayout>
-        <RadioGroup
-            android:gravity="center"
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
+
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/man"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:checked="true"
+            android:text="남자" />
 
-            <RadioButton
-                android:id="@+id/man"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="남자" />
-
-            <RadioButton
-                android:id="@+id/woman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="여자" />
+        <RadioButton
+            android:id="@+id/woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여자" />
 
 
-        </RadioGroup>
+    </RadioGroup>
 
 
     <Button

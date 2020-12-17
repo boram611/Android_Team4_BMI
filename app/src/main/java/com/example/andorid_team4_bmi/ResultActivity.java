@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -58,8 +59,12 @@ public class ResultActivity extends AppCompatActivity {
          @Override
          public void onClick(View v) {
              String[] random = getResources().getStringArray(R.array.random);
-             Random random1 =new Random(R.array.random);
-             String msg = random1.toString();
+             Random random1 =new Random(random.length);
+
+
+             String msg = String.valueOf(random1);
+
+
              new AlertDialog.Builder(ResultActivity.this)
                      .setTitle("당신을 위한 Tip")
                      .setMessage(msg)

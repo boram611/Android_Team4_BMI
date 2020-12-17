@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:gravity="center"
-    android:background="@drawable/back"
+
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,10 +42,13 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:backgroundTint="#F49393"
-
         android:textColor="#4A1616"
         android:text="go"
 
         />
+
+    
+
+
 
 </LinearLayout>

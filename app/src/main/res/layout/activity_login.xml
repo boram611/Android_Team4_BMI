@@ -8,11 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:gravity="center"
+    android:background="@drawable/back"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="50dp">
+        android:padding="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,7 +26,9 @@
             android:id="@+id/userName_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="당신의 이름을 입력해주세요"/>
+            android:hint="당신의 이름을 입력해주세요"
+            android:maxLines="1"
+            android:maxLength="5"/>
 
 
 
@@ -39,7 +42,7 @@
         android:textStyle="bold"
         android:textSize="25dp"
         android:backgroundTint="#F49393"
-        android:layout_margin="50dp"
+
         android:textColor="#4A1616"
         android:text="go"
 

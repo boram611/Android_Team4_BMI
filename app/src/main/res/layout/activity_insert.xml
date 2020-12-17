@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:padding="50dp">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
@@ -19,7 +21,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,6 +43,7 @@
     </LinearLayout>
     <!--유저 체중-->
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -65,16 +69,20 @@
     <!--성별-->
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="성별 " />
-
+    </LinearLayout>
         <RadioGroup
+            android:gravity="center"
             android:id="@+id/gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,12 +103,13 @@
 
 
         </RadioGroup>
-    </LinearLayout>
+
 
     <Button
         android:id="@+id/gotoResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#F49393"
         android:text="결과보기" />
 
 

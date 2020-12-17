@@ -2,6 +2,7 @@ package com.example.andorid_team4_bmi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 public class TipActivity extends AppCompatActivity {

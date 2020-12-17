@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -34,9 +35,6 @@ public class InsertActivity extends AppCompatActivity {
         setContentView(R.layout.activity_insert);
 
 
-
-
-
         // username 받아오기
         Intent intent = getIntent();
         String user = intent.getStringExtra("userName");
@@ -59,37 +57,37 @@ public class InsertActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = null;
 
+                if (user_weight.getText().length() == 0 && user_height.getText().length() == 0) {
+                    Log.v("왜안돼", "2");
 
-                if(user_weight==null && user_height == null){
                     new AlertDialog.Builder(InsertActivity.this)
                             .setTitle("경고!")
                             .setMessage("키나 몸무게를 입력해주세요!")
                             .setCancelable(false)//아무데나 눌렀을때 안꺼지게 하는거 (버튼을 통해서만 닫게)
                             .setPositiveButton("닫기", null)
                             .show();
-                }
+                } else {
 
-                //키, 몸무게 받아오기
-                int weight = Integer.parseInt(user_weight.getText().toString());
-                int height = Integer.parseInt(user_height.getText().toString());
-
-
-                //BMI공식
-                double Bmi = 10000 * weight / (height * height);
+                    //키, 몸무게 받아오기
+                    int weight = Integer.parseInt(user_weight.getText().toString());
+                    int height = Integer.parseInt(user_height.getText().toString());
 
 
+                    //BMI공식
+                    double Bmi = 10000 * weight / (height * height);
 
-                //Bmi 값 넘기기
-                switch (v.getId()) {
-                    case R.id.gotoResult:
-                        intent = new Intent(InsertActivity.this, ResultActivity.class);
-                        intent.putExtra("Bmi", Double.toString(Bmi));
-                        startActivity(intent);
-                        break;
 
+                    //Bmi 값 넘기기
+                    switch (v.getId()) {
+                        case R.id.gotoResult:
+                            intent = new Intent(InsertActivity.this, ResultActivity.class);
+                            intent.putExtra("Bmi", Double.toString(Bmi));
+                            startActivity(intent);
+                            break;
+
+                    }
                 }
             }
-
 
         });
 
@@ -124,7 +122,6 @@ public class InsertActivity extends AppCompatActivity {
 //            }
 //        }
 //    };
-
 
 
     //메뉴바 생성 & 처음으로 돌아가기
@@ -163,7 +160,7 @@ public class InsertActivity extends AppCompatActivity {
             float x = ev.getRawX() + view.getLeft() - scrcoords[0];
             float y = ev.getRawY() + view.getTop() - scrcoords[1];
             if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
-                ((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
         }
         return super.dispatchTouchEvent(ev);
     }

@@ -7,16 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:gravity="center"
-    android:padding="50dp"
-    android:background="@drawable/back">
+    android:padding="50dp">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
     <TextView
         android:id="@+id/userName"
-        android:text="정보를 입력해주세요!"
-        android:textSize="20dp"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -35,7 +31,7 @@
 
         <EditText
             android:id="@+id/user_height"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number" />
 
@@ -59,7 +55,8 @@
 
         <EditText
             android:id="@+id/user_Weight"
-            android:layout_width="50dp"
+
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
@@ -77,13 +74,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-    </LinearLayout>
+
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="\n성별 " />
-
+            android:text="성별 " />
+    </LinearLayout>
         <RadioGroup
             android:gravity="center"
             android:id="@+id/gender"

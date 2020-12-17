@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity{
                         .show();
                 return "";
             }
+            //글자수 제한
         },new InputFilter.LengthFilter(5)});
 
 

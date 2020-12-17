@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="random">
+
+        <item>1시간 걸으시면 279kcal가 소비됩니다</item>
+        <item>런닝머신 1시간은 773kcal이 소비됩니다</item>
+        <item>스쿼트 1시간하시면 다리는 아프지만 515kcal가 소비됩니다</item>
+        <item>계단을 1시간 오르락 내리락하시면 515kcal가 소비됩니다</item>
+        <item>줄넘기 1시간을 하시면 735kcal가 소비됩니다</item>
+        <item>자전거를 1시간 타시면 588kcal가 소비됩니다</item>
+        <item>1시간을 달리시면 588kcal가 소비됩니다</item>
+        <item>토마토 100g은 14kcal입니다</item>
+        <item>피자 한조각은 무려 500kcal입니다 이제 한조각 덜 드세요</item>
+        <item>짜장면 1그릇은 800kcal입니다 모르셨죠?</item>
+        <item>계란 한 개는 80kcal밖에 안됩니다</item>
+        <item>사과 100g은 57kcal입니다</item>
+        <item>바나나 1개는 130kcal입니다</item>
+        <item>찐 고구마 100g은 134kcal입니다</item>
+
+
+    </string-array>
+
+</resources>

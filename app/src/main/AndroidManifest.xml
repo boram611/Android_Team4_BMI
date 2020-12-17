@@ -9,30 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Andorid_Team4_BMI">
-<<<<<<<<< Temporary merge branch 1
 
-        <activity android:name=".ResultActivity" >
-
-=========
         <activity android:name=".MainActivity">
->>>>>>>>> Temporary merge branch 2
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<<<< Temporary merge branch 1
-        <activity android:name=".TipActivity"/>
-    <activity android:name=".InsertActivity" />
-    <activity android:name=".LoginActivity" />
-    <activity android:name=".MainActivity"/>
-=========
+
         <activity android:name=".TipActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".LoginActivity" />
->>>>>>>>> Temporary merge branch 2
+
     </application>
 
 </manifest>

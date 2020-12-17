@@ -8,12 +8,16 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -25,13 +29,32 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+       editText = findViewById(R.id.userName_login);
+       editText.setFilters(new InputFilter[] {new InputFilter() {
+           @Override
+           public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+
+                       //한글 영어로 문자 제한
+                       Pattern ps = Pattern.compile("^[a-zA-Z-가-힣ㄱ-ㅎㅏ-ㅣ\\u318D\\u119E\\u11A2\\u2022\\u2025a\\u00B7\\uFE55]+$");
+                       //source.equals("")백스페이스 허용 처리
+                       if (source.equals("") || ps.matcher(source).matches()) {
+                           return source;
+                       }
+                       new AlertDialog.Builder(LoginActivity.this)
+                               .setTitle("알림")
+                               .setMessage("한글, 영문만 입력 가능합니다.")
+                               .show();
+                       return "";
+                   }
+                   //글자수 제한
+               },new InputFilter.LengthFilter(5)});
 
         findViewById(R.id.gobtn_login).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 editText = findViewById(R.id.userName_login);
                 userName = editText.getText().toString();
-                if(userName.length() != 0) {
+                if (userName.length() != 0) {
                     new AlertDialog.Builder(LoginActivity.this)
 
                             .setTitle("이름 확인")
@@ -61,14 +84,14 @@ public class LoginActivity extends AppCompatActivity {
                             })
 
                             .show();
-                }else {
-                new AlertDialog.Builder(LoginActivity.this)
-                        .setMessage("이름을 입력해 주세요!")
-                        .setCancelable(false)
-                        .setPositiveButton("확인", null)
-                        .show();
+                } else {
+                    new AlertDialog.Builder(LoginActivity.this)
+                            .setMessage("이름을 입력해 주세요!")
+                            .setCancelable(false)
+                            .setPositiveButton("확인", null)
+                            .show();
 
-                 }
+                }
 
             }
         });

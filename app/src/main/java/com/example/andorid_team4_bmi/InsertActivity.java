@@ -1,9 +1,12 @@
 package com.example.andorid_team4_bmi;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,6 +15,7 @@ import android.widget.TextView;
 
 public class InsertActivity extends AppCompatActivity {
 
+// field
 
     TextView userName;
     EditText user_height; // 키
@@ -99,5 +103,30 @@ public class InsertActivity extends AppCompatActivity {
             }
         }
     };
-}
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+
+            case R.id.action_logout:
+                Intent intent = new Intent(InsertActivity.this, MainActivity.class);
+                startActivity(intent);
+                break;
+
+
+        }
+        return true;
+    }
+}//--------------------------
 

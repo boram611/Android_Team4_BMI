@@ -1,14 +1,19 @@
 package com.example.andorid_team4_bmi;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -29,6 +34,9 @@ public class InsertActivity extends AppCompatActivity {
         setContentView(R.layout.activity_insert);
 
 
+
+
+
         // username 받아오기
         Intent intent = getIntent();
         String user = intent.getStringExtra("userName");
@@ -40,7 +48,7 @@ public class InsertActivity extends AppCompatActivity {
 
 
         // id들 선언
-        gender = findViewById(R.id.gender);
+//        gender = findViewById(R.id.gender);
         user_height = findViewById(R.id.user_height);
         user_weight = findViewById(R.id.user_Weight);
 
@@ -52,12 +60,24 @@ public class InsertActivity extends AppCompatActivity {
                 Intent intent = null;
 
 
+                if(user_weight==null && user_height == null){
+                    new AlertDialog.Builder(InsertActivity.this)
+                            .setTitle("경고!")
+                            .setMessage("키나 몸무게를 입력해주세요!")
+                            .setCancelable(false)//아무데나 눌렀을때 안꺼지게 하는거 (버튼을 통해서만 닫게)
+                            .setPositiveButton("닫기", null)
+                            .show();
+                }
+
                 //키, 몸무게 받아오기
                 int weight = Integer.parseInt(user_weight.getText().toString());
                 int height = Integer.parseInt(user_height.getText().toString());
 
+
                 //BMI공식
                 double Bmi = 10000 * weight / (height * height);
+
+
 
                 //Bmi 값 넘기기
                 switch (v.getId()) {
@@ -106,6 +126,8 @@ public class InsertActivity extends AppCompatActivity {
 //    };
 
 
+
+    //메뉴바 생성 & 처음으로 돌아가기
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -128,6 +150,22 @@ public class InsertActivity extends AppCompatActivity {
 
         }
         return true;
+    }
+
+
+    //배경 터치 시 키보드 사라지게
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        View view = getCurrentFocus();
+        InputMethodManager imm;
+        if (view != null && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE) && view instanceof EditText && !view.getClass().getName().startsWith("android.webkit.")) {
+            int scrcoords[] = new int[2];
+            view.getLocationOnScreen(scrcoords);
+            float x = ev.getRawX() + view.getLeft() - scrcoords[0];
+            float y = ev.getRawY() + view.getTop() - scrcoords[1];
+            if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
+                ((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+        }
+        return super.dispatchTouchEvent(ev);
     }
 }//--------------------------
 

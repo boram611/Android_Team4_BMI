@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity{
                 new AlertDialog.Builder(LoginActivity.this)
 
                         .setTitle("이름 확인")
-                        .setMessage("당신의 이름은 " + userName + "이 맞습니다.")
+                        .setMessage("당신의 이름은 " + userName + "이 맞습니다까?")
 //                    .setIcon(R.mipmap.ic_BMI)
                         .setCancelable(false)
                         .setPositiveButton("네", new DialogInterface.OnClickListener() {

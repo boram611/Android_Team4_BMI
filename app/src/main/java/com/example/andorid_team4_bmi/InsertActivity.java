@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -57,7 +58,7 @@ public class InsertActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.gotoResult:
                         intent = new Intent(InsertActivity.this, ResultActivity.class);
-                        intent.putExtra("Bmi", "Bmi");
+                        intent.putExtra("Bmi", Bmi);
                         startActivity(intent);
                         break;
 
@@ -77,17 +78,22 @@ public class InsertActivity extends AppCompatActivity {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
 
             Intent intent = null;
+            RadioButton male = findViewById(R.id.man);
+            RadioButton female = findViewById(R.id.woman);
+
+            String man = male.getText().toString();
+            String woman = female.getText().toString();
 
             switch (checkedId) {
 
                 case R.id.man:
                     intent = new Intent(InsertActivity.this, ResultActivity.class);
-                    intent.putExtra("man", "man");
+                    intent.putExtra("man", man);
                     startActivity(intent);
                     break;
                 case R.id.woman:
                     intent = new Intent(InsertActivity.this, ResultActivity.class);
-                    intent.putExtra("woman", "woman");
+                    intent.putExtra("woman", woman);
                     startActivity(intent);
                     break;
             }

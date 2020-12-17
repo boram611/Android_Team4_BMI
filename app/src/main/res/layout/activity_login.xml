@@ -19,11 +19,11 @@
         <EditText
             android:id="@+id/userName_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:selectAllOnFocus="true"
+            android:layout_height="wrap_content"/>
+<!--            android:selectAllOnFocus="true"-->
 
 
-            />
+
 
     </LinearLayout>
     <Button

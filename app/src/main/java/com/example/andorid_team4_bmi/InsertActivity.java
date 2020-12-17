@@ -57,7 +57,7 @@ public class InsertActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = null;
 
-                if (user_weight.getText().length() == 0 && user_height.getText().length() == 0) {
+                if (user_weight.getText().length() == 0 || user_height.getText().length() == 0) {
                     Log.v("왜안돼", "2");
 
                     new AlertDialog.Builder(InsertActivity.this)

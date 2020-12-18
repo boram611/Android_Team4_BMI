@@ -7,14 +7,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:gravity="center"
-    android:padding="50dp">
+    android:padding="50dp"
+    android:background="@drawable/insert_back">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
     <TextView
         android:id="@+id/userName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginBottom="20dp"/>
 
 
     <!--유저 키-->
@@ -22,16 +25,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="키" />
+            android:text="키"
+            android:layout_marginRight="15dp"/>
 
         <EditText
             android:id="@+id/user_height"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:maxLength="3"
@@ -41,40 +46,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="cm"
+            android:layout_marginLeft="10dp"
             android:maxLines="1"/>
 
     </LinearLayout>
     <!--유저 체중-->
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="체중" />
+            android:text="체중"
+            android:layout_marginRight="10dp"/>
 
         <EditText
             android:id="@+id/user_Weight"
 
-            android:layout_width="47dp"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:maxLength="3"
             android:maxLines="1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="kg" />
-X
+            android:text="kg"
+            android:layout_marginLeft="8dp"/>
+
     </LinearLayout>
 
     <!--성별-->
 
     <LinearLayout
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -92,7 +100,8 @@ X
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
 
         <RadioButton
             android:id="@+id/man"
@@ -112,6 +121,7 @@ X
 
 
     <Button
+        android:layout_marginTop="15dp"
         android:id="@+id/gotoResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

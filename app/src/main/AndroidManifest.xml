@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Andorid_Team4_BMI">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".splash">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".MainActivity"/>
         <activity android:name=".ResultActivity" />
         <activity android:name=".InsertActivity" />
         <activity android:name=".LoginActivity" />
-
     </application>
 
 </manifest>

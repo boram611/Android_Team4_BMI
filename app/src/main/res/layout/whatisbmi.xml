@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:orientation="vertical"
+    android:background="@drawable/ee"
    >
 
 
 
 <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_gravity="center"
     >
     <TextView
-        android:background="@drawable/d_back"
+        android:layout_marginTop="160dp"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="체질량지수(BMI)란?\n\n\n(Body Mass Index)로 체중을 키의 제곱으로 나눈 값을 통해 지방의 양을 추정하는 비만측정법.
-이 BMI 지수가 높으면 높을수록 생활습관병이 걸리기 쉽고, 비만학회에서는 남녀 모두 지수가 22일때
-가장 건강한 상태이고 이상적인 체중일 때 라고 합니다.
-"
-        android:textSize="20dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"
+        android:text="체질량지수(BMI)란?"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+
 
         />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="19dp"
+        android:layout_marginTop="18dp"
+        android:text="(Body Mass Index)로 체중을 키의 제곱으로 나눈 값을 통해 지방의 양을 추정하는 비만측정법.
+이 BMI 지수가 높으면 높을수록 생활습관병이 걸리기 쉽고, 비만학회에서는 남녀 모두 지수가 22일때
+가장 건강한 상태이고 이상적인 체중일 때 라고 합니다.
+"/>
+
 </LinearLayout>
 
 </LinearLayout>

@@ -70,6 +70,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 new AlertDialog.Builder(ResultActivity.this)
                         .setTitle("당신을 위한 Tip")
+                        .setIcon(R.mipmap.ic_bmi)
                         .setMessage(msg)
                         .show();
 

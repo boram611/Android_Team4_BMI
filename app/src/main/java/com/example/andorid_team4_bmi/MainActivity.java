@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         //레이아웃 가져오기
                     new AlertDialog.Builder(MainActivity.this)
                             .setTitle("BMI 란?")
-                            .setIcon(R.mipmap.ic_launcher)
+                            .setIcon(R.mipmap.ic_bmi)
                             .setCancelable(false)
                             .setView(linearLayout)
                             .setPositiveButton("확인",null)

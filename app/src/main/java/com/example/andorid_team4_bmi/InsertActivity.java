@@ -62,6 +62,7 @@ public class InsertActivity extends AppCompatActivity {
 
                     new AlertDialog.Builder(InsertActivity.this)
                             .setTitle("경고!")
+                            .setIcon(R.mipmap.ic_bmi)
                             .setMessage("키나 몸무게를 입력해주세요!")
                             .setCancelable(false)//아무데나 눌렀을때 안꺼지게 하는거 (버튼을 통해서만 닫게)
                             .setPositiveButton("닫기", null)

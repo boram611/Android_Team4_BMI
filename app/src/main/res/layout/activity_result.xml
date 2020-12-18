@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultActivity"
-    android:background="@drawable/back">
+    android:background="@drawable/re"
+   >
 
 
 
@@ -16,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
 
 
         <TextView
@@ -36,7 +38,6 @@
 
     </LinearLayout>
     <LinearLayout
-
         android:layout_width="wrap_content"
         android:layout_height="160dp"
         android:orientation="vertical"
@@ -52,7 +53,8 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
 
     <Button
         android:id="@+id/homeBtn"
@@ -60,6 +62,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="처음으로"
+        android:layout_marginRight="50dp"
 
         />
 

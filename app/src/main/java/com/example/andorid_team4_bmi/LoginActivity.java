@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 userName = editText.getText().toString();
                 if (userName.length() != 0) {
                     new AlertDialog.Builder(LoginActivity.this)
+                            .setIcon(R.mipmap.ic_bmi)
 
                             .setTitle("이름 확인")
                             .setMessage("당신의 이름은 " + userName + "이 맞습니까?")

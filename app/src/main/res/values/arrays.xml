@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="random">
+    <string-array name="big">
 
         <item>1시간 걸으시면 279kcal가 소비됩니다</item>
         <item>런닝머신 1시간은 773kcal이 소비됩니다</item>
@@ -18,7 +18,24 @@
         <item>바나나 1개는 130kcal입니다</item>
         <item>찐 고구마 100g은 134kcal입니다</item>
 
+    </string-array>
+
+
+
+    <string-array name="thin">
+
+        <item>살찌우기 위해서는 근력운동은 필수에요!</item>
+        <item>단백질이 추가된 고탄수화물 식단을 유지해보아요!</item>
+        <item>삼시세끼 꼬박꼬박 식사를 하면 살이 찔거에요!</item>
+        <item>돈까스 덮밥의 칼로리는 900kcal에요! 꼭드세요!</item>
+        <item>식사사이에 건강한 단백질을 섭취하는게 좋아요!</item>
+        <item>매일 2알의 계란을 섭취하면 근력과 함께 체중이 늘거에요!</item>
+        <item>머슬게이너 프로틴을 마시면 벌크업된 몸을 볼 수 있어요!</item>
+
+
 
     </string-array>
+
+
 
 </resources>

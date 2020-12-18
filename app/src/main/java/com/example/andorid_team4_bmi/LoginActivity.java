@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity{
 
     EditText editText;
     String userName;

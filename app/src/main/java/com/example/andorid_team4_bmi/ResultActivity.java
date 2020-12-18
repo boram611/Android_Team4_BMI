@@ -55,24 +55,40 @@ public class ResultActivity extends AppCompatActivity {
         } else if (Bmi >= 18.5) {
             iv.setImageResource(R.drawable.jung);
             textView.setText(Double.toString(Bmi));
+
+            //마른사람들
         } else {
             iv.setImageResource(R.drawable.low);
             textView.setText(Double.toString(Bmi));
-
         }
 
         findViewById(R.id.tipBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] random = getResources().getStringArray(R.array.random);
+                String[] random = getResources().getStringArray(R.array.big);
                 int randomNum = (int) (Math.random() * random.length);
                 String msg = random[randomNum];
 
-                new AlertDialog.Builder(ResultActivity.this)
-                        .setTitle("당신을 위한 Tip")
-                        .setIcon(R.mipmap.ic_bmi)
-                        .setMessage(msg)
-                        .show();
+
+                String[] randomthin = getResources().getStringArray(R.array.thin);
+                int randomthinint = (int) (Math.random() * randomthin.length);
+                String msg1 = randomthin[randomthinint];
+
+
+
+
+                if(Bmi >= 18.5){
+                    new AlertDialog.Builder(ResultActivity.this)
+                            .setTitle("당신을 위한 Tip")
+                            .setMessage(msg)
+                            .show();
+                }else{
+                    new AlertDialog.Builder(ResultActivity.this)
+                            .setTitle("당신을 위한 Tip")
+                            .setMessage(msg1)
+                            .show();
+                }
+
 
             }
         });

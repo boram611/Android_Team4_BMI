@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView questionButton;
     Button progressButton;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
         progressButton = findViewById(R.id.progressButton);
         questionButton.setOnClickListener(onClickListener);
         progressButton.setOnClickListener(onClickListener);
-
-
-
 
     }
     View.OnClickListener onClickListener = new View.OnClickListener() {

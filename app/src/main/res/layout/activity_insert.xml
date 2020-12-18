@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="cm"
             android:layout_marginLeft="10dp"
-           />
+            android:maxLines="1"/>
 
     </LinearLayout>
     <!--유저 체중-->
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="kg"
             android:layout_marginLeft="8dp"/>
-X
+
     </LinearLayout>
 
     <!--성별-->

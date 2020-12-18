@@ -31,6 +31,19 @@ public class LoginActivity extends AppCompatActivity{
         setContentView(R.layout.activity_login);
 
         editText = findViewById(R.id.userName_login);
+
+        //엔터키 안되게 막기
+        editText.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if (keyCode == event.KEYCODE_ENTER)
+                    return true;
+
+                return false;
+            }
+        });
+
         editText.setFilters(new InputFilter[]{new InputFilter() {
             @Override
             public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
@@ -44,6 +57,8 @@ public class LoginActivity extends AppCompatActivity{
                 new AlertDialog.Builder(LoginActivity.this)
                         .setTitle("알림")
                         .setMessage("한글, 영문만 입력 가능합니다.")
+                        .setNegativeButton("확인",null)
+                        .setCancelable(false)
                         .show();
                 return "";
             }
@@ -51,17 +66,7 @@ public class LoginActivity extends AppCompatActivity{
         }, new InputFilter.LengthFilter(5)});
 
 
-        //엔터키 안되게 막기
-        editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                if (keyCode == event.KEYCODE_ENTER)
-                    return true;
-
-                return false;
-            }
-        });
 
 
         findViewById(R.id.gobtn_login).setOnClickListener(new View.OnClickListener() {

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
     android:gravity="center"
-    android:padding="50dp">
+    android:orientation="vertical"
+    android:padding="50dp"
+    tools:context=".MainActivity">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
@@ -21,8 +21,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,20 +35,19 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:maxLength="3"
-            android:maxLines="1"/>
+            android:maxLines="1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cm"
-           />
+            android:text="cm" />
 
     </LinearLayout>
     <!--유저 체중-->
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -58,17 +57,17 @@
 
         <EditText
             android:id="@+id/user_Weight"
-
             android:layout_width="47dp"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:maxLength="3"
-            android:maxLines="1"/>
+            android:maxLines="1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="kg" />
-X
+        X
     </LinearLayout>
 
     <!--성별-->

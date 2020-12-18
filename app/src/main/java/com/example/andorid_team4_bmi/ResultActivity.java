@@ -23,7 +23,7 @@ public class ResultActivity extends AppCompatActivity {
 
     TextView textView;
     ImageView iv;
-    Button home, tip;
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class ResultActivity extends AppCompatActivity {
 
         if (Bmi >= 30) {
             iv.setImageResource(R.drawable.be);
-
             textView.setText(Double.toString(Bmi));
         } else if (Bmi >= 25) {
             iv.setImageResource(R.drawable.gwa);
@@ -81,11 +80,15 @@ public class ResultActivity extends AppCompatActivity {
                     new AlertDialog.Builder(ResultActivity.this)
                             .setTitle("당신을 위한 Tip")
                             .setMessage(msg)
+                            .setNegativeButton("확인",null)
+                            .setCancelable(false)
                             .show();
                 }else{
                     new AlertDialog.Builder(ResultActivity.this)
                             .setTitle("당신을 위한 Tip")
                             .setMessage(msg1)
+                            .setNegativeButton("확인",null)
+                            .setCancelable(false)
                             .show();
                 }
 

@@ -29,7 +29,9 @@
             android:layout_height="wrap_content"
             android:hint="당신의 이름을 입력해주세요"
             android:maxLines="1"
-            android:maxLength="5"/>
+            android:maxLength="5"
+
+            />
 
 
 

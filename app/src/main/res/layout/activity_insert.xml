@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="50dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:padding="50dp">
 
 
     <!-- 유저 아이디 받아서 띄워주기 -->
@@ -21,8 +21,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,9 +46,9 @@
     </LinearLayout>
     <!--유저 체중-->
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -61,6 +61,7 @@
 
             android:layout_width="47dp"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:maxLength="3"
             android:maxLines="1"/>
 
@@ -68,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="kg" />
-
+X
     </LinearLayout>
 
     <!--성별-->
@@ -82,7 +83,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="7dp"
             android:text="성별 " />
     </LinearLayout>
 

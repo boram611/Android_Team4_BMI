@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="random">
+    <string-array name="big">
 
         <item>1시간 걸으시면 279kcal가 소비됩니다</item>
         <item>런닝머신 1시간은 773kcal이 소비됩니다</item>
@@ -18,6 +18,9 @@
         <item>바나나 1개는 130kcal입니다</item>
         <item>찐 고구마 100g은 134kcal입니다</item>
 
+    </string-array>
+
+    <string-array name="thin">
 
     </string-array>
 
